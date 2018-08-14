@@ -8,18 +8,17 @@ public class Model {
 		switch(operator) {
 		case "+":
 			return number1+number2;
-			break;
+			
 		case "-":
 			return number1-number2;
-			break;
+			
 		case "*":
 			return number1*number2;
-			break;
+			
 		case "/":
 			if(number2==0)
 				return 0;
-			return number1/(double)number2;
-			break;
+			return number1/(float)number2;
 		default:
 			return 0;
 				

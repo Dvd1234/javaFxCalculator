@@ -7,10 +7,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="267.0" prefWidth="315.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="267.0" prefWidth="315.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
    <children>
-      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" graphicTextGap="10.0" prefHeight="60.0" prefWidth="318.0" text="Label" textAlignment="RIGHT">
+      <Label id="result" fx:id="result" alignment="CENTER_RIGHT" contentDisplay="RIGHT" graphicTextGap="10.0" prefHeight="60.0" prefWidth="318.0" text="Label" textAlignment="RIGHT">
          <font>
             <Font name="Arial" size="24.0" />
          </font>
@@ -20,14 +19,14 @@
       </Label>
       <HBox alignment="CENTER" prefHeight="50.0" prefWidth="315.0" spacing="25.0">
          <children>
-            <Button alignment="CENTER" mnemonicParsing="false" prefHeight="37.0" prefWidth="56.0" text="Button">
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#processNumbers" prefHeight="37.0" prefWidth="56.0" text="7">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
             </Button>
-            <Button alignment="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="56.0" text="Button" />
-            <Button alignment="CENTER" layoutX="66.0" layoutY="10.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="56.0" text="Button" />
-            <Button alignment="CENTER" layoutX="122.0" layoutY="10.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="56.0" text="Button" />
+            <Button alignment="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#processNumbers" prefHeight="37.0" prefWidth="56.0" text="8" />
+            <Button alignment="CENTER" layoutX="66.0" layoutY="10.0" mnemonicParsing="false" onAction="#processNumbers" prefHeight="37.0" prefWidth="56.0" text="9" />
+            <Button alignment="CENTER" layoutX="122.0" layoutY="10.0" mnemonicParsing="false" onAction="#processOperator" prefHeight="37.0" prefWidth="56.0" text="/" />
          </children>
          <VBox.margin>
             <Insets />
@@ -35,38 +34,37 @@
       </HBox>
       <HBox alignment="CENTER" layoutX="10.0" layoutY="70.0" prefHeight="50.0" prefWidth="315.0" spacing="25.0">
          <children>
-            <Button alignment="CENTER" mnemonicParsing="false" prefHeight="37.0" prefWidth="56.0" text="Button">
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#processNumbers" prefHeight="37.0" prefWidth="56.0" text="4">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
             </Button>
-            <Button alignment="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="56.0" text="Button" />
-            <Button alignment="CENTER" layoutX="66.0" layoutY="10.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="56.0" text="Button" />
-            <Button alignment="CENTER" layoutX="122.0" layoutY="10.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="56.0" text="Button" />
+            <Button alignment="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#processNumbers" prefHeight="37.0" prefWidth="56.0" text="5" />
+            <Button alignment="CENTER" layoutX="66.0" layoutY="10.0" mnemonicParsing="false" onAction="#processNumbers" prefHeight="37.0" prefWidth="56.0" text="6" />
+            <Button alignment="CENTER" layoutX="122.0" layoutY="10.0" mnemonicParsing="false" onAction="#processOperator" prefHeight="37.0" prefWidth="56.0" text="*" />
          </children>
       </HBox>
       <HBox alignment="CENTER" layoutX="10.0" layoutY="120.0" prefHeight="50.0" prefWidth="315.0" spacing="25.0">
          <children>
-            <Button alignment="CENTER" mnemonicParsing="false" prefHeight="37.0" prefWidth="56.0" text="Button">
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#processNumbers" prefHeight="37.0" prefWidth="56.0" text="1">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
             </Button>
-            <Button alignment="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="56.0" text="Button" />
-            <Button alignment="CENTER" layoutX="66.0" layoutY="10.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="56.0" text="Button" />
-            <Button alignment="CENTER" layoutX="122.0" layoutY="10.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="56.0" text="Button" />
+            <Button alignment="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#processNumbers" prefHeight="37.0" prefWidth="56.0" text="2" />
+            <Button alignment="CENTER" layoutX="66.0" layoutY="10.0" mnemonicParsing="false" onAction="#processNumbers" prefHeight="37.0" prefWidth="56.0" text="3" />
+            <Button alignment="CENTER" layoutX="122.0" layoutY="10.0" mnemonicParsing="false" onAction="#processOperator" prefHeight="37.0" prefWidth="56.0" text="-" />
          </children>
       </HBox>
       <HBox alignment="CENTER" layoutX="10.0" layoutY="171.0" prefHeight="50.0" prefWidth="315.0" spacing="25.0">
          <children>
-            <Button alignment="CENTER" mnemonicParsing="false" prefHeight="37.0" prefWidth="56.0" text="Button">
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#processNumbers" prefHeight="37.0" prefWidth="137" text="0">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
             </Button>
-            <Button alignment="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="56.0" text="Button" />
-            <Button alignment="CENTER" layoutX="66.0" layoutY="10.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="56.0" text="Button" />
-            <Button alignment="CENTER" layoutX="122.0" layoutY="10.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="56.0" text="Button" />
+            <Button alignment="CENTER" layoutX="66.0" layoutY="10.0" mnemonicParsing="false" onAction="#processOperator" prefHeight="37.0" prefWidth="56.0" text="=" />
+            <Button alignment="CENTER" layoutX="122.0" layoutY="10.0" mnemonicParsing="false" onAction="#processOperator" prefHeight="37.0" prefWidth="56.0" text="+" />
          </children>
       </HBox>
    </children>
